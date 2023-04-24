@@ -20,15 +20,20 @@ def predict_datapoint():
     
     else:
         data=CustomData(
-            carat=float(request.form.get('carat')),
-            depth = float(request.form.get('depth')),
-            table = float(request.form.get('table')),
-            x = float(request.form.get('x')),
-            y = float(request.form.get('y')),
-            z = float(request.form.get('z')),
-            cut = request.form.get('cut'),
-            color= request.form.get('color'),
-            clarity = request.form.get('clarity')
+            Delivery_person_Age=float(request.form.get('Delivery_person_Age')),
+            Delivery_person_Ratings = float(request.form.get('Delivery_person_Ratings')),
+            Restaurant_latitude = float(request.form.get('Restaurant_latitude')),
+            Restaurant_longitude = float(request.form.get('Restaurant_longitude')),
+            Delivery_location_longitude = float(request.form.get('Delivery_location_longitude')),
+            time_for_pickup = request.form.get('time_for_pickup'),
+            Weather_conditions= request.form.get('Weather_conditions'),
+            Road_traffic_density = request.form.get('Road_traffic_density'),
+            Vehicle_condition = request.form.get('Vehicle_condition'),
+            multiple_deliveries= request.form.get('multiple_deliveries'),
+            Festival = request.form.get('Festival'),
+            City = request.form.get('City'),
+            Type_of_order= request.form.get('Type_of_order'),
+            Type_of_vehicle = request.form.get('Type_of_vehicle')
         )
         final_new_data=data.get_data_as_dataframe()
         predict_pipeline=PredictPipeline()
